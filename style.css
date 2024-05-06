@@ -1,0 +1,360 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* font-family: Arial, Helvetica, sans-serif; */
+}
+.header{
+    height: 100vh;
+    width: 100%;
+    background-image: url(img/lydia-torrey-AovflqCt9Ws-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 2px 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 100px;
+}
+.navbar{
+    flex: 1;
+    text-align: right;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.navbar ul li a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+.navbar ul li::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #26d2fd; 
+    display: block;
+    margin: auto; 
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+   width: 100%;
+}
+.name{
+    width: 90%;
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.name h1{
+    font-size: 62px;
+}
+.name p{
+    font-size: 14px;
+}
+.name-btn{
+    display: inline-block;
+    text-decoration:none;
+    color: #ffffff;
+    border: 1px solid #141414;
+    padding: 12px 34px;
+    font-size: 14px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.name-btn:hover{
+    border:1px solid #9bfff7;
+    background: #9bfff7;
+    transition: 1s;
+}
+
+nav .bi{
+    display: none;
+}
+
+@media (max-width:768px){
+    .name h1{
+        font-size: 20px;
+    }
+    .navbar ul li{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        background: #36d7ff;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+
+    }
+    nav .bi{
+        display: block;
+        color: #ffffff;
+        margin:  10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .navbar ul{
+        padding: 30px;
+    }
+}
+
+
+
+/* @media (max-width:758px){
+    .name h1{
+        font-size: 20px;
+    }
+    .navbar ul li{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        background: #36d7ff;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .bi{
+        display: block;
+        color: #ffffff;
+        margin:  10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .navbar ul{
+        padding: 30px;
+
+    }
+} */
+/* @media (max-width:968px) {
+    .name h1{
+        font-size: 20px;
+    }
+    .navbar ul li{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        background: #36d7ff;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+
+    }
+    nav .bi{
+        display: block;
+        color: #ffffff;
+        margin:  10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .navbar ul{
+        padding: 30px;
+
+    }
+} */
+
+
+
+
+/* -----AboutUs----- */
+.AboutUs{
+    width: 100%;
+    margin-top: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+.us-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    padding: 30px 30px 30px 30px;
+}
+.us-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+.us-col p{
+    padding: 0;
+}
+.us-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+@media(max-width:768px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+/* ------services------ */
+.services{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    
+}
+.services h1{
+    font-size: 28px;
+    font-weight: 600;
+}
+.services p{
+    color: #000;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.serve{
+    margin-top: 5%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+}
+.names-serve{
+    flex-basis: 31%;
+    height: 350px;
+    width: 350px;
+    background: #46daff;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing:border-box ;
+    transition: 0.5s;
+}
+.names-serve h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.names-serve:hover{
+    box-shadow: 0 0 30px 0px #022085;
+}
+.names-serve img{
+    width: 30px;
+    height: 30px;
+}
+
+@media only screen and (max-width:768px){
+    .serve{
+        flex-direction: column;
+    }
+}
+
+/* ----reviews----- */
+.reviews{
+    width: 100%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+     /* display: flex; */
+    /* flex-direction: column;
+    justify-content: space-between;  */
+}
+.review-col{
+    display: flex;
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #46daff;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+    padding: 30px 30px 30px 30px;
+    margin: 30px 30px 30px 30px;
+    justify-content: space-between;
+
+}
+.review-col img{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+.review-col p{
+    padding: 0;
+}
+.review-col h3{
+    margin-top: 15px;
+}
+.review-col .bi{
+    color: #022085;
+}
+
+/* ----Call Us--- */
+
+.cu{
+    margin: 100px auto;
+    width: 80%;
+    background-image: url(img/IMG_20240419_060407.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+.cu h1{
+    padding: 0;
+}
+@media (max-width:768px) {
+    .cu h1{
+        font-size: 20px;
+    }
+    
+}
+
+/* ----footer---- */
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    background: #141414;
+}
+.footer h1{
+    color: hsl(0, 0%, 100%);
+}
+.footer  p{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+    color: hsl(0, 100%, 99%);
+}
+.icons .bi{
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}

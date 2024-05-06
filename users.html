@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <link rel="stylesheet" href="user.css">
+    
+</head>
+<body>
+   
+<section>
+    </header>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Username</th>
+                <th>Status</th>
+                <th>Payment</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>John Doe</td>
+                <td>Active</td>
+                <td>.00</td>
+                <td><button onclick="showPopup()">Remove User</button></td>
+                <div id="popup" class="popup">Remove?
+                    <button onclick="cancelPopup()">Cancel</button>
+                    <button onclick="yesPopup()">Yes</button>
+                </div>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Jane Smith</td>
+                <td>Inactive</td>
+                <td>.00</td>
+                <td><button id="remove-user">Remove User</button></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>John Doe</td>
+                <td>Active</td>
+                <td>.00</td>
+                <td><button id="remove-user">Remove User</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Jane Smith</td>
+                <td>Inactive</td>
+                <td>.00</td>
+                <td><button id="remove-user">Remove User</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="dashboard-admin.html"><button class="back">back to Dashboard</button></a>
+</section>
+
+
+<script>
+    function showPopup() {
+        var popup = document.getElementById("popup");
+        popup.style.display = "block";
+    }
+
+    function cancelPopup() {
+        var popup = document.getElementById("popup");
+        popup.style.display = "none";
+    }
+
+    function yesPopup() {
+        // Add functionality for the "Yes" button here
+        var popup = document.getElementById("popup");
+        popup.innerHTML = "Done";
+        setTimeout(function() {
+            popup.style.display = "none";
+        }, 2000);
+    }
+</script>
+</body>
+</html>

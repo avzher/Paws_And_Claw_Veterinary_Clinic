@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Form</title>
+    <link rel="stylesheet" href="apointment-user.css">
+</head>
+<body>
+    <form action="dashboard-user.html" class="appointment">
+        <h2>Appointment Form</h2>
+        <div class="input-group">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+        </div>
+        <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+        </div>
+        <div class="input-group">
+            <label for="phone">Phone</label>
+            <input type="text" name="phone" id="phone">
+        </div>
+        <div class="input-group">
+            <label for="date">Date</label>
+            <input type="date" name="date" id="date">
+        </div>
+        <div class="input-group">
+            <label for="service">Service</label>
+            <select name="service" id="service">
+                <option value="">Select a service</option>
+                <option value="surgical">Surgical</option>
+                <option value="radiology">Radiology</option>
+                <option value="anesthesia">Anesthesia</option>
+            </select>
+        <div class="input-group">
+            <label for="time">Time</label>
+            <input type="time" name="time" id="time">
+        </div>
+        <div class="input-group">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        </div>
+        <div class="input-group">
+            <input type="submit" value="Submit" class="btn">
+        </div>
+    </form>
+    
+</body>
+</html>

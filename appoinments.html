@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments</title>
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="appointment.css">
+    <style>
+        body {font-family: Arial, sans-serif;}
+        table {border-collapse: collapse;}
+        th, td {padding: 8px; text-align: left;}
+        .button {display: inline-block; background-color: #4CAF50; color: white; padding: 12px 24px; text-align: center; text-decoration: none; border-radius: 4px;}
+        .button-accept {background-color: #4CAF50;}
+        .button-decline {background-color: #ff0000;}
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h2>Upcoming Appointments</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Time</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>10:00 AM</td>
+                        <td><button class="button button-accept">Accept</button> <button class="button button-decline">Decline</button></td>
+                    </tr>
+                    <tr>
+                        <td>Jane Doe</td>
+                        <td>2:00 PM</td>
+                        <td><button class="button button-accept">Accept</button> <button class="button button-decline">Decline</button></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>Miss Doe</td>
+                        <td>9:00 AM</td>
+                        <td><button class="button button-accept">Accept</button> <button class="button button-decline">Decline</button></td>
+                    </tr>
+                    <tr>
+                        <td>Jay Doe</td>
+                        <td>3:00 PM</td>
+                        <td><button class="button button-accept">Accept</button> <button class="button button-decline">Decline</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="dashboard-admin.html"><button class="back">back to Dashboard</button></a>
+        </section>
+    </main>
+    
+    <script>
+        const acceptButtons = document.querySelectorAll('.button-accept');
+        const declineButtons = document.querySelectorAll('.button-decline');
+        const successMessage = document.createElement('div');
+        successMessage.innerHTML = 'Successful';
+        successMessage.style.display = 'none';
+        const body = document.querySelector('body');
+        acceptButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                successMessage.style.display = 'block';
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                }, 2000);
+            });
+        });
+        declineButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                successMessage.style.display = 'block';
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                }, 2000);
+            });
+        });
+        body.appendChild(successMessage);
+    </script>
+</body>
+</html>
